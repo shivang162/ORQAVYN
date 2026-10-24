@@ -1,0 +1,29 @@
+/* ===== Mobile responsive ===== */
+@media (max-width: 900px) {
+  .sc-in {
+    position: static;
+    height: auto;
+    grid-template-columns: 1fr;
+    padding: 80px var(--m) 0;
+  }
+  .scene { height: auto !important; }
+  .si { position: static; opacity: 1; transform: none; margin-top: 36px; }
+  .sc-num, .sc-t { display: none; }
+  .faqwrap { grid-template-columns: 1fr; }
+  .faqh { position: static; }
+  .fo { opacity: 1; transform: none; }
+  .row { grid-template-columns: 1fr; gap: 10px; }
+  .cards, .case, .formwrap { grid-template-columns: 1fr; }
+  .card { border-right: 0; border-bottom: 1px solid #cfcdc7; }
+  .hq3 { opacity: .08; }
+  .zl { left: 10px; }
+  .zdot { left: 10px; }
+  .zs, .zs.r {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 64px 44px;
+    text-align: left;
+  }
+  .dock a { padding: 9px 9px; font-size: 10px; letter-spacing: .06em; }
+  .top .pill { display: none; }
+}

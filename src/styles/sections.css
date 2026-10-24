@@ -1,0 +1,127 @@
+/* ===== Light band / Tailored section ===== */
+.light { background: var(--bg); border-top: 0; }
+.light h2, .light h3 { color: var(--bg); }
+.light small, .light .lab, .light .sub, .light p, .light h4 { color: #5b5b57; }
+.light .sub a { color: var(--bg); }
+.light .ln > span { color: var(--bg); }
+
+.lband {
+  padding: clamp(80px, 12vw, 180px) var(--m);
+  background: var(--warm);
+  color: var(--bg);
+  will-change: clip-path;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 72px;
+  border: 1px solid #cfcdc7;
+}
+.card {
+  padding: 32px;
+  border-right: 1px solid #cfcdc7;
+  transition: background .4s;
+}
+.card:last-child { border: 0; }
+.card:hover { background: #e9e6df; }
+.card h3 { font-size: 2rem; margin: 14px 0 28px; }
+.card h4 {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--bg);
+}
+.card p { margin-bottom: 24px; font-size: .95rem; }
+
+/* ===== Case studies ===== */
+.case {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr 1fr;
+  gap: var(--m);
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+  margin-top: 56px;
+  transform-origin: 50% 0;
+  will-change: transform;
+}
+.case:first-of-type { margin-top: 72px; }
+.stat {
+  font-size: clamp(4rem, 9vw, 8rem);
+  line-height: 1;
+  color: #fff;
+  letter-spacing: -.03em;
+  margin: 16px 0 8px;
+  font-variant-numeric: tabular-nums;
+  height: 1em;
+}
+.cap { color: var(--mid); }
+.cm h4 {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+.cm p { margin-bottom: 22px; color: var(--mid); }
+.two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.two b {
+  font: 400 2.25rem 'EB Garamond', serif;
+  display: block;
+  color: var(--warm);
+  height: 1em;
+  overflow: hidden;
+}
+.two span { font-size: 13px; color: var(--mid); }
+
+/* ===== Odometer ===== */
+.od {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+  vertical-align: top;
+  line-height: 1;
+}
+.dg {
+  display: block;
+  transform: translateY(0);
+  transition: transform 1.8s var(--eo) calc(var(--k) * .09s);
+}
+.dg b {
+  display: block;
+  height: 1em;
+  line-height: 1;
+  font-weight: inherit;
+}
+.in .dg { transform: translateY(calc(var(--d) * -1em)); }
+
+/* ===== Bars ===== */
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 220px;
+  background: var(--s1);
+  border: 1px solid var(--line);
+  padding: 20px;
+  transition: border-color .3s;
+}
+.bars:hover { border-color: var(--mid); }
+.bars i {
+  flex: 1;
+  background: var(--warm);
+  height: calc(var(--h) * 100%);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition: transform 1.2s var(--eo) var(--d);
+}
+.in .bars i { transform: none; }

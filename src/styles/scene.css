@@ -1,0 +1,63 @@
+/* ===== Pinned scene ===== */
+.scene {
+  position: relative;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+}
+.sc-in {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--m);
+  padding: 110px var(--m) 70px;
+}
+.sc-l { display: flex; flex-direction: column; }
+.sc-l h2 { font-size: clamp(2rem, 4vw, 3.4rem); }
+.sc-num {
+  margin-top: auto;
+  height: 1em;
+  font-size: clamp(6rem, 15vw, 13rem);
+  line-height: 1;
+  overflow: hidden;
+  color: var(--dim);
+}
+.sc-col { transition: transform 1.1s var(--eo); }
+.sc-col b {
+  display: block;
+  height: 1em;
+  font: 400 1em/1 'EB Garamond', serif;
+  letter-spacing: -.04em;
+}
+.sc-r { position: relative; }
+.si {
+  position: absolute;
+  left: 0; right: 0; top: 50%;
+  transform: translateY(calc(-50% + 40px));
+  opacity: 0;
+  transition: opacity .7s, transform .9s var(--eo);
+}
+.si.on { opacity: 1; transform: translateY(-50%); }
+.si.out { transform: translateY(calc(-50% - 40px)); }
+.si h3 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  margin: 12px 0;
+  line-height: 1.1;
+}
+.si p { color: var(--mid); max-width: 480px; }
+.sc-t {
+  position: absolute;
+  right: var(--m);
+  bottom: 36px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.sc-t i {
+  width: 24px;
+  height: 1px;
+  background: var(--line);
+  transition: all .5s var(--eo);
+}
+.sc-t i.on { background: var(--warm); width: 56px; }
