@@ -1,4 +1,5 @@
 import content from '../content';
+import { GlowingEffect } from './ui/glowing-effect';
 
 export default function Bottleneck() {
   const { bottleneck } = content;
@@ -9,6 +10,14 @@ export default function Bottleneck() {
       <div className="list">
         {bottleneck.rows.map(r => (
           <div className="row fo" key={r.n}>
+            <GlowingEffect
+              spread={40}
+              glow={true}
+              disabled={false}
+              proximity={64}
+              inactiveZone={0.01}
+              borderWidth={1.5}
+            />
             <span className="n">{r.n}</span>
             <h3>{r.h}</h3>
             <p>{r.p}</p>

@@ -268,6 +268,8 @@ form .pill { align-self: flex-start; }
 
 /* ===== Footer ===== */
 footer {
+  max-width: 1600px;
+  margin: 0 auto;
   border-top: 1px solid var(--line);
   padding: 32px var(--m) var(--m);
   overflow: hidden;

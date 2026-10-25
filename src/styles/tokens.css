@@ -29,8 +29,8 @@ body {
 a { color: inherit; }
 img { display: block; }
 
-#site { transform-origin: 50% 40%; }
-main { max-width: 1600px; margin: auto; }
+#site { width: 100%; transform-origin: 50% 40%; }
+main { width: 100%; margin: auto; }
 
 /* ===== Progress bar ===== */
 #prog2 {
@@ -100,7 +100,13 @@ select:focus-visible, textarea:focus-visible {
 .rv3.in { opacity: 1; transform: none; }
 
 /* ===== Section border line animation ===== */
-.sec { padding: clamp(80px, 12vw, 180px) var(--m); border-top: 1px solid var(--line); }
+.sec {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: clamp(80px, 12vw, 180px) var(--m);
+  border-top: 1px solid var(--line);
+}
 .sec::before {
   content: "";
   position: absolute;

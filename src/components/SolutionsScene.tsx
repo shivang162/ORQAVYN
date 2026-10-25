@@ -1,4 +1,5 @@
 import content from '../content';
+import { GlowingEffect } from './ui/GlowingEffect';
 
 export default function SolutionsScene() {
   const { solutions } = content;
@@ -19,7 +20,8 @@ export default function SolutionsScene() {
         </div>
         <div className="sc-r">
           {solutions.items.map((item, i) => (
-            <article className={`si${i === 0 ? ' on' : ''}`} key={item.n}>
+            <article className={`si group relative overflow-hidden rounded-xl p-4 transition-colors duration-300${i === 0 ? ' on' : ''}`} key={item.n}>
+              <GlowingEffect />
               <span className="n">{item.n}</span>
               <small>{item.small}</small>
               <h3>{item.h}</h3>
